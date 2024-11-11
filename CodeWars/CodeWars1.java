@@ -1,3 +1,5 @@
+package CodeWars;
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -166,7 +168,7 @@ public class CodeWars1 {
                 + " et dolor.";
         String LIPSUM2 = "123 45 6";
         // System.out.println(justify(LIPSUM, 30));
-        System.out.println(justify(LIPSUM, 18));
+        System.out.println(justify(LIPSUM, 33));
         // System.out.println(justify(LIPSUM, 30));
         // System.out.println(justify(LIPSUM, 30));
         // System.out.println(justify(LIPSUM2, 7));
