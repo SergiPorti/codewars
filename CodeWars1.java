@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class Practica {
+public class CodeWars1 {
     public static void main(String[] args) {
         // System.out.println(findIt(new int[] { 1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5 }));
         // System.out.println(findMissingLetter(new char[] { 'a', 'b', 'c', 'd', 'f'
