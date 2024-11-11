@@ -11,10 +11,15 @@ public class Main {
     public static void main(String[] args) {
         List<ProblemExecutorInterface> problemExecutors = new ArrayList<>();
 
-        problemExecutors.add(new Nochevieja());
+        problemExecutors.add(new Nochevieja("Nochevieja"));
 
         for (ProblemExecutorInterface problemExecutorInterface : problemExecutors) {
-            problemExecutorInterface.executeProblem();
+            try {
+                problemExecutorInterface.executeProblem();
+            } catch (Exception e) {
+                System.out.println(e.getLocalizedMessage());
+                e.printStackTrace();
+            }
         }
     }
 
