@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import AceptaElReto.ProblemExecutor.ProblemExecutorInterface;
+import AceptaElReto.ProblemExecutor.ProblemExecutorImpl.Desembalse;
 import AceptaElReto.ProblemExecutor.ProblemExecutorImpl.Nochevieja;
 import AceptaElReto.ProblemExecutor.ProblemExecutorImpl.OrdenandoElArmario;
 import AceptaElReto.ProblemExecutor.ProblemExecutorImpl.PicPocPong;
@@ -16,6 +17,7 @@ public class Main {
         problemExecutors.add(new Nochevieja());
         problemExecutors.add(new OrdenandoElArmario());
         problemExecutors.add(new PicPocPong());
+        problemExecutors.add(new Desembalse());
 
         for (ProblemExecutorInterface problemExecutorInterface : problemExecutors) {
             try {
