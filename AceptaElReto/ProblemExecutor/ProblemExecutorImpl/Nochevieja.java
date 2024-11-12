@@ -1,27 +1,20 @@
 package AceptaElReto.ProblemExecutor.ProblemExecutorImpl;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import AceptaElReto.ProblemExecutor.ProblemExecutorAbstractClassName;
 
 public class Nochevieja extends ProblemExecutorAbstractClassName {
 
-    public Nochevieja(String problemName) {
-        super(problemName);
+    public Nochevieja() {
+        super(Nochevieja.class);
     }
 
     @Override
     public void executeProblem() throws Exception {
-        File file;
-        String path = "C:\\Users\\0021193\\Desktop\\CodeWars\\CodeWars\\AceptaElReto\\ProblemExecutor\\ProblemExecutorImpl\\InputDataFiles\\Nochevieja.txt";
-        try {
-            file = new File(path);
-        } catch (NullPointerException e) {
-            throw new FileNotFoundException(
-                    "Problema " + super.getProblemName() + " no se ha encontrado la ruta con el path: " + path);
-        }
+        File file = super.getFileFromClassName();
+
         Scanner sc = new Scanner(file);
         String hora;
         int hour, minute;
@@ -41,5 +34,4 @@ public class Nochevieja extends ProblemExecutorAbstractClassName {
 
         sc.close();
     }
-
 }
