@@ -19,7 +19,7 @@ public class Main {
             try {
                 problemExecutorInterface.executeProblem();
             } catch (Exception e) {
-                System.out.println(e.getLocalizedMessage());
+                System.err.println(e.getLocalizedMessage());
                 e.printStackTrace();
             }
         }
