@@ -10,7 +10,6 @@ public abstract class ProblemExecutorAbstractClassName implements ProblemExecuto
 
     public <T> ProblemExecutorAbstractClassName(Class<T> problemNameClass) {
         this.problemName = problemNameClass.getSimpleName();
-        System.out.println("Problema: " + problemName);
     }
 
     public String getProblemName() {
