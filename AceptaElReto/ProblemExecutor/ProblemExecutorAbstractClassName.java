@@ -14,7 +14,7 @@ public abstract class ProblemExecutorAbstractClassName implements ProblemExecuto
     }
 
     public String getProblemName() {
-        return problemName;
+        return this.problemName;
     }
 
     public File getFileFromClassName() throws Exception {
