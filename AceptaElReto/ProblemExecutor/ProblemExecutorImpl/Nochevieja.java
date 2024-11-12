@@ -15,7 +15,7 @@ public class Nochevieja extends ProblemExecutorAbstractClassName {
     @Override
     public void executeProblem() throws Exception {
         File file;
-        String path = ".\\InputDataFiles\\Nochevieja.txt";
+        String path = "C:\\Users\\0021193\\Desktop\\CodeWars\\CodeWars\\AceptaElReto\\ProblemExecutor\\ProblemExecutorImpl\\InputDataFiles\\Nochevieja.txt";
         try {
             file = new File(path);
         } catch (NullPointerException e) {
@@ -23,45 +23,23 @@ public class Nochevieja extends ProblemExecutorAbstractClassName {
                     "Problema " + super.getProblemName() + " no se ha encontrado la ruta con el path: " + path);
         }
         Scanner sc = new Scanner(file);
+        String hora;
+        int hour, minute;
 
-        String pregunta;
-        int valorHora, valorMinut, minut;
-        boolean fiPrograma;
+        while (sc.hasNextLine()) {
+            hora = sc.nextLine();
+            if ("00:00".equals(hora))
+                break;
+            hour = Integer.parseInt(hora.substring(0, 2));
+            minute = Integer.parseInt(hora.substring(3));
+            int minutosMediaNoche = 24 * 60;
 
-        do {
-            fiPrograma = sc.hasNextLine();
-            pregunta = sc.nextLine();
-
-            String[] vector = pregunta.split(":");
-            valorHora = Integer.parseInt(vector[0]);
-            valorMinut = Integer.parseInt(vector[1]);
-
-            if (!(valorHora > 24 || valorHora < 0)) {
-                fiPrograma = fiPrograma(valorHora, valorMinut);
-                if (fiPrograma) {
-                    minut = calcularMinut(valorHora, valorMinut);
-                    System.out.println(minut);
-                }
+            if (hour >= 0 && hour < 24 && minute >= 0 && minute < 60) {
+                System.out.println(minutosMediaNoche - ((hour * 60) + minute));
             }
-        } while (fiPrograma);
-
-        sc.close();
-    }
-
-    public static boolean fiPrograma(int hora, int minut) {
-        return hora == 00 && minut == 00;
-    }
-
-    public static int calcularMinut(int hora, int minut) {
-        int minuts = 0;
-
-        if (!(hora > 24 || hora < 0)) {
-            hora = 24 - hora;
-            minuts = hora * 60;
-            minuts -= minut;
         }
 
-        return minuts;
+        sc.close();
     }
 
 }
