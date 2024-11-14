@@ -1,2 +1,2 @@
-# codewars
-Codewars Exercices and logic exercices made by me just to practice.
+# Logic exercices
+There are Kata Exercices and competition exercices from different pages like aceptaelreto.com and codewars.com
